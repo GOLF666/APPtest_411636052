@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    android:layout_gravity="center">
+
+    <!-- TimePicker -->
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/time_picker_bg"
+        android:layout_marginBottom="12dp"
+        android:importantForAccessibility="yes" />
+
+    <!-- Category Spinner -->
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/spinner_bg"
+        android:spinnerMode="dropdown"
+        android:padding="8dp" />
+
+    <!-- Medicine Type Spinner (僅在選擇「吃藥」時顯示) -->
+    <Spinner
+        android:id="@+id/spinnerMedication"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/spinner_bg"
+        android:spinnerMode="dropdown"
+        android:padding="8dp"
+        android:visibility="gone" />
+
+    <!-- Day of Week Spinner -->
+    <Spinner
+        android:id="@+id/spinnerDayOfWeek"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/spinner_bg"
+        android:spinnerMode="dropdown"
+        android:padding="8dp" />
+
+</LinearLayout>

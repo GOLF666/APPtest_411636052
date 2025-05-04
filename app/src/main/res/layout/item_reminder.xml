@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <!-- 主容器，採用水平 LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- 圖標部分 -->
+        <ImageView
+            android:id="@+id/imgCategoryIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_medication"
+            android:contentDescription="藥物類別圖示" />
+
+        <!-- 資訊區：顯示時間、類別、重複資訊與倒數計時 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- 時間 -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="時間："
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <!-- 類別 -->
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="類別："
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/black" />
+
+            <!-- 重複（星期幾或重複資訊） -->
+            <TextView
+                android:id="@+id/tvDayOfWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重複："
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black" />
+
+            <!-- 倒數計時 -->
+            <TextView
+                android:id="@+id/tvCountdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+
+        <!-- 按鈕區：垂直排列的容器，包含「修改」與「删除」按鈕 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <!-- 修改按鈕 -->
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修改"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#4A90E2"
+                android:layout_marginEnd="8dp"
+                android:minHeight="48dp"
+                android:minWidth="64dp" />
+
+            <!-- 删除按鈕 -->
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="删除"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF5A5F"
+                android:minHeight="48dp"
+                android:minWidth="64dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
